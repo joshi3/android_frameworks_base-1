@@ -695,9 +695,9 @@ public class NetworkControllerImpl extends BroadcastReceiver
                 }
                 mConfig = Config.readConfig(mContext);
                 mReceiverHandler.post(this::handleConfigurationChanged);
+                break;
             case IMS_STATUS_CHANGED:
                 updateImsIcon();
-                break;
                 break;
             case Intent.ACTION_SIM_STATE_CHANGED:
                 // Avoid rebroadcast because SysUI is direct boot aware.

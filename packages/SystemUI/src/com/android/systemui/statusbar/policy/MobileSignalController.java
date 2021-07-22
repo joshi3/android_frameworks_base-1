@@ -1015,11 +1015,6 @@ public class MobileSignalController extends SignalController<
         return iconGroup;
     }
 
-    private int getDataNetworkType() {
-        return mServiceState != null ?
-                mServiceState.getDataNetworkType() : TelephonyManager.NETWORK_TYPE_UNKNOWN;
-    }
-
     public boolean isVowifiAvailable() {
         return mCurrentState.voiceCapable && mCurrentState.imsRegistered
                && (getDataNetworkType() == TelephonyManager.NETWORK_TYPE_IWLAN
